@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flags flexing</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">        
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            height: 100vh; /* hoogte meegeven anders centreert het niet */
+            justify-content: center;
+            position: relative;
+        }
+        .flagWrapper {
+            display: flex;
+            width: 52vw;
+            height: 60vh;
+        }
+        .flagRect {
+            /* volledige beschikbare hoogte en breedte */
+            width: 100%;
+            height: 100%;
+        }
+        .zwart {
+            background: black;
+        }
+        .geel {
+            background: #FDDA24;
+        }
+        .rood {
+            background: #EF3340;
+        }
+        #belgiumText {
+            position: absolute;
+        }
+        h1 {
+            color: white;
+            font-family: "Dancing Script", Helvetica, sans-serif;
+            font-size: 15vh;
+            /* text-transform: uppercase; */
+        }
+
+        #imageMarlyn {
+            position: absolute;
+            width: auto;
+            height: 60vh;
+        }
+
+        @media screen and (min-width: 400px) {      
+            #imageMarlyn{      
+                content:url("Marilyn_down.png");
+            } 
+        } 
+        @media (min-width: 1000px){      
+            #imageMarlyn{      
+                content:url("Marilyn_up.png");
+            } 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flagWrapper" >
+            <div class="zwart flagRect"></div>
+            <div class="geel flagRect"></div>
+            <div class="rood flagRect"></div>
+        </div>
+        <div id="imageMarlyn"></div>
+        <div id="belgiumText">
+            <h1> België</h1>
+        </div>
+        
+    </div>
+</body>
+</html>
